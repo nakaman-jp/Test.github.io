@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ショッピングドボンゲーム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 画面1: パル専用設定画面 -->
+  <div id="screen1" class="screen visible">
+    <h2>パル専用設定画面</h2>
+
+    <h3>共通ドボン店（5つ選択）:</h3>
+    <label>共通ドボン1:
+      <select id="commonDobon1"></select>
+    </label>
+    <label>共通ドボン2:
+      <select id="commonDobon2"></select>
+    </label>
+    <label>共通ドボン3:
+      <select id="commonDobon3"></select>
+    </label>
+    <label>共通ドボン4:
+      <select id="commonDobon4"></select>
+    </label>
+    <label>共通ドボン5:
+      <select id="commonDobon5"></select>
+    </label>
+
+    <label>共通オオドボン店:
+      <select id="bigDobon"></select>
+    </label>
+
+    <h3>パーソナルドボン店</h3>
+    <label>せな:
+      <select id="dobonSena"></select>
+    </label>
+    <label>なかまん:
+      <select id="dobonNakaman"></select>
+    </label>
+    <label>かい:
+      <select id="dobonKai"></select>
+    </label>
+    <label>にき:
+      <select id="dobonNiki"></select>
+    </label>
+
+    <button onclick="saveDobons()">設定を保存してスタート</button>
+  </div>
+
+  <!-- 画面2: 子が店を選ぶ -->
+  <div id="screen2" class="screen hidden">
+    <h2 id="playerLabel"></h2>
+    <label>店を選ぶ:
+      <select id="storeChoice"></select>
+    </label>
+    <button onclick="confirmStore()">決定</button>
+  </div>
+
+  <!-- 画面3: 結果発表 -->
+  <div id="screen3" class="screen hidden">
+    <h2>結果発表</h2>
+    <p id="resultText"></p>
+    <button onclick="nextTurn()">次の人へ</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
